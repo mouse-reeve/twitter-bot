@@ -382,7 +382,7 @@ blacklist = [
     "zoophilia",
     "cuck",
     "retard",
-    "retarted",
+    "retart",
     'molest',
     'kkk',
 ]

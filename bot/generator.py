@@ -1,8 +1,8 @@
 ''' Create the bot's content '''
-import json
-import settings
+from bot import settings
+from bot.blacklist import check_blacklist
 
-from blacklist import check_blacklist
+import json
 
 def get_tweet():
     ''' create tweet content '''

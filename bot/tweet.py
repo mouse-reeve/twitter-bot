@@ -1,7 +1,6 @@
 ''' post a tweet from the queued file '''
-import generator
+from bot import settings, generator
 import json
-import settings
 from TwitterAPI import TwitterAPI
 
 API = TwitterAPI(settings.TWITTER_API_KEY, settings.TWITTER_API_SECRET,

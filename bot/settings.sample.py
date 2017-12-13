@@ -7,7 +7,6 @@ TWITTER_ACCESS_SECRET = ''
 
 # the location of your twitter bot's repo, ie:
 # /home/mouse/bestbot
-# (no trailing slash)
 FILEPATH = ''
 
 # Number of hours between tweets
