@@ -1,6 +1,6 @@
 # Twitter Bot Template
 
-Boilerplate for creating simple, non-interactive twitter bots that post periodically.
+Boilerplate for creating simple, non-interactive twitter bots that post periodically. My comparisons bot, [@botaphor](https://github.com/mouse-reeve/metaphinder), is an example of how I use this template in practice.
 
 This is intended for coders familiar with Python and bash.
 
