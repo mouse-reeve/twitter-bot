@@ -3,8 +3,13 @@ from bot import settings, generator
 import json
 from TwitterAPI import TwitterAPI
 
-API = TwitterAPI(settings.TWITTER_API_KEY, settings.TWITTER_API_SECRET,
-                 settings.TWITTER_ACCESS_TOKEN, settings.TWITTER_ACCESS_SECRET)
+try:
+    API = TwitterAPI(settings.TWITTER_API_KEY,
+                     settings.TWITTER_API_SECRET,
+                     settings.TWITTER_ACCESS_TOKEN,
+                     settings.TWITTER_ACCESS_SECRET)
+except:
+    API = None
 
 if settings.USE_QUEUE:
     queue = json.load(open('%s/queue.json' % settings.FILEPATH))
@@ -13,10 +18,14 @@ if settings.USE_QUEUE:
 
     json.dump(queue[1:], open('%s/queue.json' % settings.FILEPATH, 'w'))
 else:
-    data = generator.build_tweet()
+    data = generator.get_tweet()
 
 if data:
-    r = API.request('statuses/update', data)
+    if API:
+        r = API.request('statuses/update', data)
 
-    if r.status_code != 200:
-        print(r.response)
+        if r.status_code != 200:
+            print(r.response)
+    else:
+        print('----- API unavailable -----')
+        print(data)
