@@ -6,6 +6,8 @@ import json
 
 def get_tweet():
     ''' create tweet content '''
+
+    # TODO: Your neat stuff here!
     text = ''
 
     # make sure it isn't posting something gross
