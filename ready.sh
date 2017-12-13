@@ -1,5 +1,5 @@
 #!/bin/bash
 
 source venv/bin/activate
-python setup.py install
-python tests/tests.py
+python3 setup.py install
+python3 tests/tests.py

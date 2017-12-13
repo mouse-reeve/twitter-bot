@@ -8,7 +8,7 @@ def get_tweet():
     ''' create tweet content '''
 
     # TODO: Your neat stuff here!
-    text = ''
+    text = 'test tweet'
 
     # make sure it isn't posting something gross
     if check_blacklist(text):

@@ -11,4 +11,5 @@ setup(
     packages=['bot'],
 
     license='MIT',
+    install_requires=['TwitterAPI==2.4.2'],
 )
