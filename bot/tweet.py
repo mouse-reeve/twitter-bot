@@ -15,7 +15,8 @@ if settings.USE_QUEUE:
 else:
     data = generator.build_tweet()
 
-r = API.request('statuses/update', data)
+if data:
+    r = API.request('statuses/update', data)
 
-if r.status_code != 200:
-    print(r.response)
+    if r.status_code != 200:
+        print(r.response)
