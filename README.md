@@ -2,6 +2,8 @@
 
 Boilerplate for creating simple, non-interactive twitter bots that post periodically.
 
+This is intended for coders familiar with Python and bash.
+
 ## Instructions
 
 To make a bot, copy this repo and run `start.sh` to create
